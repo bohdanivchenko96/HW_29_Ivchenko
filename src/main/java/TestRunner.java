@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        tags = {"@Smoke, @AgileProject"},
+        tags = {"@Smoke, @AgileProject,@DragAndDrop"},
         features = "src/test/resources",
         glue = {"steps"},
         plugin = { "pretty", "html:target/htmlreptorts"}

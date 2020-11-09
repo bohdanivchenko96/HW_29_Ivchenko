@@ -47,4 +47,13 @@ public class AgileProjectSteps {
         homePage.closeAlert();
     }
 
+    @When("user click button")
+    public void userClickButton(String buttonName) {
+
+    }
+
+    @And("add file path")
+    public void addFilePath() {
+
+    }
 }

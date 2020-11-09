@@ -26,8 +26,9 @@ public class HomePage extends BasePage{
         return loginForm.shouldBe(Condition.visible).isDisplayed();
     }
 
-    public void navigate(){
+    public HomePage navigate(){
         open("/");
+        return this;
     }
     public void enterLoginName(String name){
         loginNameField.shouldBe(Condition.visible).setValue(name);
@@ -51,8 +52,9 @@ public class HomePage extends BasePage{
         WebDriverRunner.getWebDriver().switchTo().alert().accept();
     }
 
-    public void getDropDownList(){
+    public HomePage getDropDownList(){
         mainMenuFragment.getDropDownList().click();
+        return this;
     }
     public void selectPageInDropDownList(String pageName){
         SelenideElement pageInDropDownList = $x("//a[contains(text(), '" + pageName + "')]");
