@@ -58,7 +58,7 @@ public class HomePage extends BasePage{
     }
     public void selectPageInDropDownList(String pageName){
         SelenideElement pageInDropDownList = $x("//a[contains(text(), '" + pageName + "')]");
-        pageInDropDownList.click();
+        pageInDropDownList.scrollTo().click();
     }
 
 }

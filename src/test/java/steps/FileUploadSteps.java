@@ -8,6 +8,7 @@ import pages.FileUploadPage;
 import pages.HomePage;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class FileUploadSteps {
     HomePage homePage = new HomePage();
@@ -36,7 +37,6 @@ public class FileUploadSteps {
 
     @Then("success message is shown")
     public void successMessageIsShown() {
-        String text = "1 file has been successfully uploaded.";
-        assertEquals(text, fileUploadPage.getMessage());
+        assertTrue(fileUploadPage.getMessage());
     }
 }
